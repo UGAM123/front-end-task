@@ -13,7 +13,7 @@
                 <td style="text-align: justify;">{{item.title}}</td>
                 <td style="text-align: justify;">{{item.body}}</td>
                 <td>{{item.userId}}</td>
-                <td><button (click)="openDialog(item.userId)">Short Details</button></td>
+                <td *ngIf="showColumn"><button (click)="openDialog(item.userId)">Short Details</button></td>
                 <td><button [routerLink]="['/user-details/' + item.userId]">View Detailed Info</button></td>
             </tr>
         </ng-container>

@@ -10,6 +10,7 @@ import { ShortDetailsComponent } from '../short-details/short-details.component'
 export class PostsComponent implements OnInit {
 
   @Input() data:any;
+  @Input() showColumn:any;
   userSelected:any
   constructor(public dialog: MatDialog) { }
 
