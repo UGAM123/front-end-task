@@ -1,10 +1,10 @@
 <table class="posts-table">
     <thead>
-        <td>Id</td>
+        <td>Post Id</td>
         <td>Title</td>
         <td>Body</td>
-        <td>UserId</td>
-        <td colspan="2" class="posts-table-view">View</td>
+        <td *ngIf="showColumn">UserId</td>
+        <td colspan="2" class="posts-table-view" *ngIf="showColumn">View</td>
     </thead>
     <tbody>
         <ng-container *ngFor="let item of data">
@@ -12,9 +12,9 @@
                 <td>{{item.id}}</td>
                 <td style="text-align: justify;">{{item.title}}</td>
                 <td style="text-align: justify;">{{item.body}}</td>
-                <td>{{item.userId}}</td>
+                <td *ngIf="showColumn">{{item.userId}}</td>
                 <td *ngIf="showColumn"><button (click)="openDialog(item.userId)">Short Details</button></td>
-                <td><button [routerLink]="['/user-details/' + item.userId]">View Detailed Info</button></td>
+                <td *ngIf="showColumn"><button [routerLink]="['/user-details/' + item.userId]">View Detailed Info</button></td>
             </tr>
         </ng-container>
     </tbody>
