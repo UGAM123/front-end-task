@@ -1,0 +1,32 @@
+.posts-table{
+    border-collapse: collapse;
+    width: 70%;
+    margin: 25px auto;
+}
+
+.posts-table td{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.posts-table thead{
+    text-align: center;
+    justify-content: center;
+}
+
+.posts-table-view{
+    width: 25%;
+}
+
+.posts-table tbody{
+    text-align: center;
+}
+
+.posts-table tbody tr td button{
+    background-color:blue;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}

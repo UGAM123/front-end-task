@@ -1,0 +1,14 @@
+<div class="container">
+    <h2>User Details : </h2>
+    <p>Name : {{userData.name}}</p>
+    <p>User Name : {{userData.username}}</p>
+    <p>Email : {{userData.email}}</p>
+    <p>Address : {{userData.address.suite}}, {{userData.address.street}}, {{userData.address.city}} :
+        {{userData.address.zipcode}}</p>
+    <p>Phone : {{userData.name}}</p>
+    <p>Website : {{userData.name}}</p>
+    <p>Company : {{userData.company.name}}</p>
+    <br>
+</div>
+<div class="container"><h3>User Posts : </h3></div>
+<app-posts [data]="postsData"></app-posts>
